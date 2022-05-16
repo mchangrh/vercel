@@ -1,4 +1,4 @@
-const crypto = require("crypto")
+import crypto from "crypto"
 
 export default function handler(request, response) {
   const nonce = crypto.randomBytes(16).toString('base64');

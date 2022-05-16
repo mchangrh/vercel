@@ -8,6 +8,7 @@ export default function handler(request, response) {
   if (!text) {
     return response.status(400).end("Please include text in the request body")
   }
+  // repalce dot with en dash
   const morse = text.replace(/\./gi, '–')
     .replace(/-/gi, '—')
   response.end(morse);
